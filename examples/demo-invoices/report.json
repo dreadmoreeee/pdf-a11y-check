@@ -1,0 +1,318 @@
+{
+  "tool": "pdf-a11y-check",
+  "version": "1.0.0",
+  "note": "Automated checks only: this is not a full PDF/UA conformance validation (use PAC or veraPDF for that) and a manual review is still needed.",
+  "summary": {
+    "files": 3,
+    "unreadable": 0,
+    "errors": 3,
+    "warnings": 6,
+    "info": 6,
+    "average_score": 75
+  },
+  "files": [
+    {
+      "path": "examples/demo-invoices/invoice-nb-en.pdf",
+      "size": 2580,
+      "pages": 1,
+      "score": 75,
+      "error": null,
+      "counts": {
+        "error": 1,
+        "warning": 2,
+        "info": 2
+      },
+      "findings": [
+        {
+          "id": "tagged",
+          "severity": "error",
+          "message": "The PDF is not tagged (no structure tree). Screen readers have to guess the reading order and cannot tell headings, lists, tables or images apart. Export with 'tagged PDF' turned on, or add tags in a PDF editor.",
+          "refs": [
+            "WCAG 1.3.1",
+            "WCAG 1.3.2",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "display-doc-title",
+          "severity": "warning",
+          "message": "/ViewerPreferences /DisplayDocTitle is not true, so viewers show the file name in the window title instead of the document title.",
+          "refs": [
+            "WCAG 2.4.2",
+            "PDF18",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "fonts-embedded",
+          "severity": "warning",
+          "message": "Not embedded: 2 of 2 fonts (standard-14 fonts, which viewers are expected to supply). Viewers substitute a local font, so spacing and glyphs can differ between devices, and PDF/UA requires every font to be embedded.",
+          "refs": [
+            "PDF/UA 7.21.4.1"
+          ],
+          "details": [
+            "Helvetica (standard 14)",
+            "Helvetica-Bold (standard 14)"
+          ]
+        },
+        {
+          "id": "title",
+          "severity": "info",
+          "message": "Title 'Invoice TW-2026-0101' is set in the Info dictionary only; PDF/UA expects it in the XMP metadata (dc:title) as well.",
+          "refs": [
+            "WCAG 2.4.2",
+            "PDF18",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "pdfua-id",
+          "severity": "info",
+          "message": "No PDF/UA identifier (pdfuaid:part) in the XMP metadata. Add it only after the file has been checked against PDF/UA: it is a claim of conformance.",
+          "refs": [
+            "PDF/UA 5"
+          ],
+          "details": []
+        }
+      ],
+      "passed": [
+        "encryption",
+        "lang",
+        "text",
+        "fonts-unicode",
+        "file-size",
+        "metadata"
+      ],
+      "not_applicable": {
+        "figure-alt": "not tagged",
+        "structure": "not tagged",
+        "headings": "not tagged",
+        "table-headers": "not tagged",
+        "role-map": "not tagged",
+        "tab-order": "no annotations",
+        "form-tooltips": "no form fields",
+        "link-target": "no links",
+        "link-contents": "no links"
+      },
+      "stats": {
+        "encrypted": false,
+        "text_pages": 1,
+        "images": 0,
+        "fonts": 2,
+        "tagged": false,
+        "title": "Invoice TW-2026-0101",
+        "lang": "en-CA",
+        "fonts_not_embedded": 2,
+        "form_fields": 0,
+        "links": 0,
+        "kb_per_page": 2.5,
+        "pdfua_part": null
+      }
+    },
+    {
+      "path": "examples/demo-invoices/invoice-on-en.pdf",
+      "size": 2443,
+      "pages": 1,
+      "score": 75,
+      "error": null,
+      "counts": {
+        "error": 1,
+        "warning": 2,
+        "info": 2
+      },
+      "findings": [
+        {
+          "id": "tagged",
+          "severity": "error",
+          "message": "The PDF is not tagged (no structure tree). Screen readers have to guess the reading order and cannot tell headings, lists, tables or images apart. Export with 'tagged PDF' turned on, or add tags in a PDF editor.",
+          "refs": [
+            "WCAG 1.3.1",
+            "WCAG 1.3.2",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "display-doc-title",
+          "severity": "warning",
+          "message": "/ViewerPreferences /DisplayDocTitle is not true, so viewers show the file name in the window title instead of the document title.",
+          "refs": [
+            "WCAG 2.4.2",
+            "PDF18",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "fonts-embedded",
+          "severity": "warning",
+          "message": "Not embedded: 2 of 2 fonts (standard-14 fonts, which viewers are expected to supply). Viewers substitute a local font, so spacing and glyphs can differ between devices, and PDF/UA requires every font to be embedded.",
+          "refs": [
+            "PDF/UA 7.21.4.1"
+          ],
+          "details": [
+            "Helvetica (standard 14)",
+            "Helvetica-Bold (standard 14)"
+          ]
+        },
+        {
+          "id": "title",
+          "severity": "info",
+          "message": "Title 'Invoice TW-2026-0103' is set in the Info dictionary only; PDF/UA expects it in the XMP metadata (dc:title) as well.",
+          "refs": [
+            "WCAG 2.4.2",
+            "PDF18",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "pdfua-id",
+          "severity": "info",
+          "message": "No PDF/UA identifier (pdfuaid:part) in the XMP metadata. Add it only after the file has been checked against PDF/UA: it is a claim of conformance.",
+          "refs": [
+            "PDF/UA 5"
+          ],
+          "details": []
+        }
+      ],
+      "passed": [
+        "encryption",
+        "lang",
+        "text",
+        "fonts-unicode",
+        "file-size",
+        "metadata"
+      ],
+      "not_applicable": {
+        "figure-alt": "not tagged",
+        "structure": "not tagged",
+        "headings": "not tagged",
+        "table-headers": "not tagged",
+        "role-map": "not tagged",
+        "tab-order": "no annotations",
+        "form-tooltips": "no form fields",
+        "link-target": "no links",
+        "link-contents": "no links"
+      },
+      "stats": {
+        "encrypted": false,
+        "text_pages": 1,
+        "images": 0,
+        "fonts": 2,
+        "tagged": false,
+        "title": "Invoice TW-2026-0103",
+        "lang": "en-CA",
+        "fonts_not_embedded": 2,
+        "form_fields": 0,
+        "links": 0,
+        "kb_per_page": 2.4,
+        "pdfua_part": null
+      }
+    },
+    {
+      "path": "examples/demo-invoices/invoice-qc-fr.pdf",
+      "size": 2615,
+      "pages": 1,
+      "score": 75,
+      "error": null,
+      "counts": {
+        "error": 1,
+        "warning": 2,
+        "info": 2
+      },
+      "findings": [
+        {
+          "id": "tagged",
+          "severity": "error",
+          "message": "The PDF is not tagged (no structure tree). Screen readers have to guess the reading order and cannot tell headings, lists, tables or images apart. Export with 'tagged PDF' turned on, or add tags in a PDF editor.",
+          "refs": [
+            "WCAG 1.3.1",
+            "WCAG 1.3.2",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "display-doc-title",
+          "severity": "warning",
+          "message": "/ViewerPreferences /DisplayDocTitle is not true, so viewers show the file name in the window title instead of the document title.",
+          "refs": [
+            "WCAG 2.4.2",
+            "PDF18",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "fonts-embedded",
+          "severity": "warning",
+          "message": "Not embedded: 2 of 2 fonts (standard-14 fonts, which viewers are expected to supply). Viewers substitute a local font, so spacing and glyphs can differ between devices, and PDF/UA requires every font to be embedded.",
+          "refs": [
+            "PDF/UA 7.21.4.1"
+          ],
+          "details": [
+            "Helvetica (standard 14)",
+            "Helvetica-Bold (standard 14)"
+          ]
+        },
+        {
+          "id": "title",
+          "severity": "info",
+          "message": "Title 'Facture TW-2026-0102' is set in the Info dictionary only; PDF/UA expects it in the XMP metadata (dc:title) as well.",
+          "refs": [
+            "WCAG 2.4.2",
+            "PDF18",
+            "PDF/UA 7.1"
+          ],
+          "details": []
+        },
+        {
+          "id": "pdfua-id",
+          "severity": "info",
+          "message": "No PDF/UA identifier (pdfuaid:part) in the XMP metadata. Add it only after the file has been checked against PDF/UA: it is a claim of conformance.",
+          "refs": [
+            "PDF/UA 5"
+          ],
+          "details": []
+        }
+      ],
+      "passed": [
+        "encryption",
+        "lang",
+        "text",
+        "fonts-unicode",
+        "file-size",
+        "metadata"
+      ],
+      "not_applicable": {
+        "figure-alt": "not tagged",
+        "structure": "not tagged",
+        "headings": "not tagged",
+        "table-headers": "not tagged",
+        "role-map": "not tagged",
+        "tab-order": "no annotations",
+        "form-tooltips": "no form fields",
+        "link-target": "no links",
+        "link-contents": "no links"
+      },
+      "stats": {
+        "encrypted": false,
+        "text_pages": 1,
+        "images": 0,
+        "fonts": 2,
+        "tagged": false,
+        "title": "Facture TW-2026-0102",
+        "lang": "fr-CA",
+        "fonts_not_embedded": 2,
+        "form_fields": 0,
+        "links": 0,
+        "kb_per_page": 2.6,
+        "pdfua_part": null
+      }
+    }
+  ]
+}

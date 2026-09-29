@@ -1,0 +1,38 @@
+{
+  "number": "TW-2026-0101",
+  "issue_date": "2026-09-15",
+  "due_date": "2026-10-15",
+  "language": "en",
+  "province": "NB",
+  "seller": {
+    "name": "Tidewater Web Co.",
+    "address": [
+      "200 Example Street",
+      "Miramichi, NB  E1V 0A1"
+    ],
+    "email": "billing@tidewater.example.ca",
+    "phone": "506-555-0100",
+    "gst_hst_number": "123456789 RT0001"
+  },
+  "buyer": {
+    "name": "Harbourview Bakery",
+    "address": [
+      "12 Wharf Road",
+      "Moncton, NB  E1C 0B2"
+    ],
+    "email": "orders@harbourview.example.ca"
+  },
+  "lines": [
+    {
+      "description": "Menu redesign (print and PDF)",
+      "quantity": 1,
+      "unit_price": "650.00"
+    },
+    {
+      "description": "Online ordering page (hours)",
+      "quantity": "4.5",
+      "unit_price": "85.00"
+    }
+  ],
+  "notes": "Payment by Interac e-Transfer to billing@tidewater.example.ca. Questions: 506-555-0100."
+}

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-a11y-check"
+version = "1.0.0"
+description = "Automated accessibility and quality checks for PDF invoices, menus and brochures: tags, title, language, alt text, fonts, forms, links, permissions, metadata."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Marvin Palencia"}]
+requires-python = ">=3.10"
+dependencies = ["pypdf>=4"]
+keywords = ["pdf", "accessibility", "a11y", "wcag", "pdf-ua", "ci"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Text Processing :: General",
+    "Topic :: Software Development :: Quality Assurance",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "reportlab>=4"]
+
+[project.scripts]
+pdf-a11y-check = "pdf_a11y_check.cli:main"
+
+[project.urls]
+Author = "https://marvin.demarkstudio.ca"
+
+[tool.setuptools]
+packages = ["pdf_a11y_check"]

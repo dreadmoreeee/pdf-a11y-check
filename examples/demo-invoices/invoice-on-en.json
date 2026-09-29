@@ -1,0 +1,36 @@
+{
+  "number": "TW-2026-0103",
+  "issue_date": "2026-09-25",
+  "language": "en",
+  "province": "ON",
+  "seller": {
+    "name": "Tidewater Web Co.",
+    "address": [
+      "200 Example Street",
+      "Miramichi, NB  E1V 0A1"
+    ],
+    "email": "billing@tidewater.example.ca",
+    "phone": "506-555-0100",
+    "gst_hst_number": "123456789 RT0001"
+  },
+  "buyer": {
+    "name": "Maple Lane Dental",
+    "address": [
+      "300 Sample Avenue",
+      "Ottawa, ON  K1A 0B4"
+    ],
+    "email": "office@maplelane.example.ca"
+  },
+  "lines": [
+    {
+      "description": "Accessible appointment form",
+      "quantity": 1,
+      "unit_price": "480.00"
+    },
+    {
+      "description": "Stripe payment link setup (hours)",
+      "quantity": 2,
+      "unit_price": "85.00"
+    }
+  ]
+}

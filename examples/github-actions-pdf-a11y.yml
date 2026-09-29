@@ -1,0 +1,24 @@
+# Example GitHub Actions job: check every PDF in the repository before it is published.
+# Copy to .github/workflows/pdf-a11y.yml in your own project and adjust the paths.
+name: PDF accessibility checks
+
+on:
+  pull_request:
+    paths: ["**/*.pdf"]
+  push:
+    branches: [main]
+    paths: ["**/*.pdf"]
+
+jobs:
+  pdf-a11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install git+https://github.com/dreadmoreeee/pdf-a11y-check
+      # Markdown report in the job summary (never fails the step)
+      - run: pdf-a11y-check public/ --format markdown --fail-on never >> "$GITHUB_STEP_SUMMARY"
+      # Fail the job on errors (exit 1) or unreadable files (exit 2)
+      - run: pdf-a11y-check public/ --fail-on error --skip metadata

@@ -1,0 +1,39 @@
+{
+  "number": "TW-2026-0102",
+  "issue_date": "2026-09-20",
+  "due_date": "2026-10-20",
+  "language": "fr",
+  "province": "QC",
+  "seller": {
+    "name": "Tidewater Web Co.",
+    "address": [
+      "200 Example Street",
+      "Miramichi, NB  E1V 0A1"
+    ],
+    "email": "billing@tidewater.example.ca",
+    "phone": "506-555-0100",
+    "gst_hst_number": "123456789 RT0001",
+    "qst_number": "1234567890 TQ0001"
+  },
+  "buyer": {
+    "name": "Cafe du Vieux-Port",
+    "address": [
+      "8 rue de l'Exemple",
+      "Quebec, QC  G1K 0C3"
+    ],
+    "email": "compta@vieuxport.example.ca"
+  },
+  "lines": [
+    {
+      "description": "Site web bilingue (5 pages)",
+      "quantity": 1,
+      "unit_price": "1400.00"
+    },
+    {
+      "description": "Hebergement, 12 mois",
+      "quantity": 12,
+      "unit_price": "12.00"
+    }
+  ],
+  "notes": "Paiement par virement Interac. Merci!"
+}
